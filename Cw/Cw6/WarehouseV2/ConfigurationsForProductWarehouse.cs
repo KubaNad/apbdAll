@@ -11,7 +11,8 @@ public static class ConfigurationsForProductWarehouse
             try
             {
                 var productWarehouseId = await service.AddProductToWarehouseAsync(productWarehouse);
-                return Results.Ok(new { IdProductWarehouse = productWarehouseId });
+                return Results.Ok(productWarehouseId);
+                // return Results.Ok(new { IdProductWarehouse = productWarehouseId });
             }
             catch (Exception ex)
             {
